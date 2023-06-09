@@ -1,10 +1,11 @@
 //require the library
 const mongoose = require("mongoose");
+require("dotenv").config();
+
+const mongodbUrl = process.env.MONGODB_URL;
 
 //connect to the database
-mongoose.connect(
-  "mongodb+srv://malikabusufyan:ld6jeaGzSNJxryle@cluster0.c200owm.mongodb.net/?retryWrites=true&w=majority"
-);
+mongoose.connect(mongodbUrl);
 
 //acquire the connection(to check if it's successful)
 const db = mongoose.connection;
