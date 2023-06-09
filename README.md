@@ -16,7 +16,7 @@ Example:-
       "link_to_vote": "http://localhost:8000/options/1/add_vote"
     }
   ]
-}```
+}'''
 
 ## We can use Postman to test these API's
 
