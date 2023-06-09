@@ -52,7 +52,7 @@ module.exports.deleteQuestion = async (req, res) => {
     const { id } = req.params;
     const question = await Question.findById(id).populate({
       path: "options",
-      select: "votes",
+      select: "votes, link_to_vote",
     });
     const { options } = question;
     let isVoted = false;
