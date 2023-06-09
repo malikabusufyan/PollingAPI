@@ -17,4 +17,10 @@ router.post("/questions/:id/options/create", optionController.createOptions);
 //To add vote
 router.get("/options/:id/add_vote", optionController.addVote);
 
+//To delete an Option
+router.delete("/options/:id/delete", optionController.deleteOption);
+
+//To delete a question
+router.delete("/questions/:id/delete", questionController.deleteQuestion);
+
 module.exports = router;

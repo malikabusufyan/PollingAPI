@@ -1,6 +1,7 @@
 const Option = require("../model/Option");
 const Question = require("../model/Question");
 
+//To create Options for the questions usign Questions ID
 module.exports.createOptions = async (req, res) => {
   try {
     const { text } = req.body;
@@ -9,7 +10,7 @@ module.exports.createOptions = async (req, res) => {
       text,
     });
 
-    option.link = `/options/${option._id}/add_vote`;
+    option.link_to_vote = `http://localhost/options/${option._id}/add_vote`;
     option.save();
 
     const { id } = req.params;
@@ -56,4 +57,31 @@ module.exports.addVote = async (req, res) => {
 };
 
 //Delete Options
-
+module.exports.deleteOption = async (req, res) => {
+  try {
+    const { id } = req.params;
+    let option = await Option.findById(id);
+    if (option.votes === 0) {
+      await option.deleteOne({ _id: id });
+      return res.status(200).json({
+        message: "Option Deleted Successfully",
+        data: {
+          deletedOption: option,
+        },
+      });
+    }
+    return res.status(200).json({
+      message: "Can't be Deleted because it has Votes",
+      data: {
+        option,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Something Went Wrong",
+      data: {
+        error,
+      },
+    });
+  }
+};
