@@ -10,7 +10,7 @@ module.exports.createOptions = async (req, res) => {
       text,
     });
 
-    option.link_to_vote = `http://localhost/options/${option._id}/add_vote`;
+    option.link_to_vote = `/options/${option._id}/add_vote`;
     option.save();
 
     const { id } = req.params;
