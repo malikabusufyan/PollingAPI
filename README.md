@@ -14,10 +14,10 @@ It is for creating a Question and Adding different options to it which can be vo
 ### APT to Add a vote to an option of question: 
         pollingapi-vsfc.onrender.com/options/:id/add_vote
 
-### API to Delete a question: 
+### API to Delete an Option: 
         pollingapi-vsfc.onrender.com/options/:id/delete
 
-### API to Delete an Option: 
+### API to Delete a question: 
         pollingapi-vsfc.onrender.com/questions/:id/delete
 
 ### API to View a question with it’s options and all the votes given to it: 
