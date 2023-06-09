@@ -17,14 +17,20 @@ id: 1,
 
 ## We can use Postman to test these API's
 
-### API to Create a question: pollingapi-vsfc.onrender.com/questions/create
+### API to Create a question: 
+        pollingapi-vsfc.onrender.com/questions/create
 
-### APT to Add options to a question: pollingapi-vsfc.onrender.com/questions/:id/options/create
+### APT to Add options to a question: 
+        pollingapi-vsfc.onrender.com/questions/:id/options/create
 
-### APT to Add a vote to an option of question: pollingapi-vsfc.onrender.com/options/:id/add_vote
+### APT to Add a vote to an option of question: 
+        pollingapi-vsfc.onrender.com/options/:id/add_vote
 
-### API to Delete a question: pollingapi-vsfc.onrender.com/options/:id/delete
+### API to Delete a question: 
+        pollingapi-vsfc.onrender.com/options/:id/delete
 
-### API to Delete an Option: pollingapi-vsfc.onrender.com/questions/:id/delete
+### API to Delete an Option: 
+        pollingapi-vsfc.onrender.com/questions/:id/delete
 
-### API to View a question with it’s options and all the votes given to it: pollingapi-vsfc.onrender.com/questions/:id
+### API to View a question with it’s options and all the votes given to it: 
+        pollingapi-vsfc.onrender.com/questions/:id
