@@ -10,9 +10,9 @@ const optionSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  // link_to_vote: {
-  //   type: String,
-  // },
+  link_to_vote: {
+    type: String,
+  },
 });
 
 const Option = mongoose.model("option", optionSchema);
