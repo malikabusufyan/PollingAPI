@@ -3,21 +3,6 @@
 This is a Polling API which is an Open Application. 
 It is for creating a Question and Adding different options to it which can be voted by any user.
 
-Example:-
-```json
-{
-  "id": 1,
-  "title": "Who is your favorite from the Ninjas Mentors",
-  "options": [
-    {
-      "id": 1,
-      "text": "Aakash Tyagi",
-      "votes": 100,
-      "link_to_vote": "http://localhost:8000/options/1/add_vote"
-    }
-  ]
-}'''
-
 ## We can use Postman to test these API's
 
 ### API to Create a question: 
@@ -37,3 +22,19 @@ Example:-
 
 ### API to View a question with it’s options and all the votes given to it: 
         pollingapi-vsfc.onrender.com/questions/:id
+        
+        
+Example:-
+```json
+{
+  "id": 1,
+  "title": "Who is your favorite from the Ninjas Mentors",
+  "options": [
+    {
+      "id": 1,
+      "text": "Aakash Tyagi",
+      "votes": 100,
+      "link_to_vote": "http://localhost:8000/options/1/add_vote"
+    }
+  ]
+}
