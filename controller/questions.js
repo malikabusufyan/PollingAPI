@@ -22,3 +22,26 @@ module.exports.createQuestions = async (req, res) => {
     });
   }
 };
+
+//To view question and its options using ID
+module.exports.viewQuestions = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const question = await Question.findById(id).populate({
+      path: "options",
+    });
+    return res.status(200).json({
+      message: "See the Question and Options",
+      data: {
+        question,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: "Something Went Wrong",
+      data: {
+        error,
+      },
+    });
+  }
+};
