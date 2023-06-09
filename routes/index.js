@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
+//Access to the Controllers for creating API
 const questionController = require("../controller/questions");
 const optionController = require("../controller/options");
-console.log("Index Routing properly");
 
 //To create a new question
 router.post("/questions/create", questionController.createQuestions);
