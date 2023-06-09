@@ -34,7 +34,7 @@ Example:-
       "id": 1,
       "text": "Aakash Tyagi",
       "votes": 100,
-      "link_to_vote": "http://localhost:8000/options/1/add_vote"
+      "link_to_vote": ""https://pollingapi-vsfc.onrender.com/options/64831faf5eda99247f6dcd65/add_vote"
     }
   ]
 }
